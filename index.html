@@ -1,0 +1,81 @@
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大雪山森林遊樂區</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* 這裡設定背景圖與文字 */
+    body { font-family: "Microsoft JhengHei", sans-serif; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .card { transition: transform 0.3s; border: none; }
+    .card:hover { transform: translateY(-10px); }
+    section { padding: 80px 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="#">🌲 大雪山 Dasyueshan</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1 class="display-3 fw-bold">雲端上的仙境</h1>
+      <p class="lead fs-3">深呼吸，遇見台灣最美的森林</p>
+      <a href="#intro" class="btn btn-success btn-lg rounded-pill mt-3">開始探索</a>
+    </div>
+  </header>
+
+  <section id="intro" class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-success">熱門景點</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" class="card-img-top" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">啞口觀景台</h5>
+            <p>絕美雲海與夕陽。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800" class="card-img-top" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">雪山神木</h5>
+            <p>1,400歲紅檜巨木。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="https://images.unsplash.com/photo-1466057474922-26244bc6062d?w=800" class="card-img-top" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            <h5 class="fw-bold">天池</h5>
+            <p>高山湖泊倒映藍天。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-dark text-white text-center py-4">
+    <small>© 2024 大雪山 Demo</small>
+  </footer>
+</body>
+</html>
