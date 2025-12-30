@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大雪山森林遊樂區</title>
+    <title>大雪山森林遊樂區 - 雲海與神木的故鄉</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 設定全域字型 */
-        body { font-family: "Microsoft JhengHei", sans-serif; }
+        body { font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; background-color: #f8f9fa; }
         
-        /* 設定主視覺區塊 (Hero Section) */
+        /* --- Hero 區塊 (主視覺) --- */
         .hero {
-            /* 專業建議：
-               這裡使用了大雪山林道 48K 觀景台的雲海照片。
-               使用 background-size: cover 確保圖片自動填滿螢幕而不變形。
-            */
+            /* 背景圖：使用大雪山雲海 */
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Dasyueshan_Forest_Road_48K_Observation_Deck_facing_east_20201025.jpg/1280px-Dasyueshan_Forest_Road_48K_Observation_Deck_facing_east_20201025.jpg');
-            
-            background-size: cover;      /* 關鍵：讓圖片鋪滿整個區塊 */
-            background-position: center; /* 關鍵：圖片居中對齊 */
-            height: 100vh;               /* 設定高度為視窗的 100% */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            color: white;
+            justify-content: center;
             text-align: center;
+            color: white;
+            position: relative;
         }
-        
-        /* 標題樣式調整 */
         .hero h1 {
             font-size: 4rem;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8); /* 加深陰影讓字在亮背景也清楚 */
-            font-weight: bold;
-            letter-spacing: 2px; /* 增加字距，看起來更有質感 */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            font-weight: 700;
+            letter-spacing: 3px;
         }
         .hero p {
             font-size: 1.5rem;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+            margin-bottom: 30px;
+        }
+
+        /* --- 景點卡片區塊 --- */
+        .card-img-top {
+            height: 250px; /* 強制圖片高度一致，排版才整齊 */
+            object-fit: cover; /* 讓圖片不變形填滿 */
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        /* 標題下方的小裝飾線 */
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #198754; /* 森林綠 */
         }
     </style>
 </head>
@@ -47,26 +65,104 @@
         <div class="container">
             <h1>大雪山森林遊樂區</h1>
             <p>漫步雲端 • 探索 1,400 歲神木與壯闊雲海</p>
-            <a href="#intro" class="btn btn-primary btn-lg mt-3 px-5 rounded-pill">開始探索</a>
+            <a href="#intro" class="btn btn-success btn-lg px-5 rounded-pill shadow">開始探索</a>
         </div>
     </div>
 
     <div id="intro" class="container py-5">
-        <div class="row">
-            <div class="col-md-8 mx-auto text-center">
-                <h2 class="mb-4">關於大雪山</h2>
-                <p class="lead text-secondary">
-                    大雪山國家森林遊樂區位於台中市和平區，海拔超過 2,000 公尺。
-                    這裡擁有全台灣最完整的巨木群，以及變化萬千的雲海奇景。
-                    夏天避暑、秋天賞楓、冬天賞雪，是親近自然、放鬆身心的絕佳去處。
+        <div class="row justify-content-center">
+            <div class="col-md-10 text-center">
+                <h2 class="section-title">關於這片森林</h2>
+                <p class="lead text-secondary" style="line-height: 1.8;">
+                    大雪山國家森林遊樂區位於台中市和平區，曾經是台灣重要的林場。
+                    這裡海拔超過 2,000 公尺，擁有全台灣最完整的巨木群。
+                    比起阿里山，這裡更加寧靜原始，運氣好還能遇見國寶級的「帝雉」與「藍腹鷴」。
                 </p>
             </div>
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-4">
+    <div class="bg-white py-5">
+        <div class="container">
+            <h2 class="text-center section-title">三大必遊亮點</h2>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%E9%9B%AA%E5%B1%B1%E7%A5%9E%E6%9C%A8_Snow_Mountain_Sacred_Tree.jpg/800px-%E9%9B%AA%E5%B1%B1%E7%A5%9E%E6%9C%A8_Snow_Mountain_Sacred_Tree.jpg" class="card-img-top" alt="雪山神木">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">雪山神木</h5>
+                            <p class="card-text text-secondary">樹齡約 1,400 年的紅檜，姿態挺拔壯觀，是台灣排名第 11 的巨木，也是大雪山的地標。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://images.unsplash.com/photo-1518182170546-07fa6eb29709?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="大雪山天池">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">大雪山天池</h5>
+                            <p class="card-text text-secondary">位於小雪山南稜，海拔 2,600 公尺的高山湖泊。終年不涸，湖面倒映著藍天與瑞雪亭。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="雲海晚霞">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">雲海晚霞</h5>
+                            <p class="card-text text-secondary">大雪山林道 48K 觀景台是欣賞雲海的最佳地點，尤其在秋冬季節，氣勢磅礡。</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center section-title">參觀資訊</h2>
+                <table class="table table-hover table-bordered text-center shadow-sm" style="background: white;">
+                    <thead class="table-success">
+                        <tr>
+                            <th>項目</th>
+                            <th>內容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>開放時間</td>
+                            <td>06:30 - 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>海拔高度</td>
+                            <td>1,800 ~ 2,996 公尺</td>
+                        </tr>
+                        <tr>
+                            <td>全票價格</td>
+                            <td>假日 200 元 / 平日 150 元</td>
+                        </tr>
+                        <tr>
+                            <td>最佳季節</td>
+                            <td>夏季避暑、秋季賞楓</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center mt-4">
+                    <a href="https://recreation.forest.gov.tw/" target="_blank" class="btn btn-outline-success">前往林務局官網訂房</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
         <p class="m-0">&copy; 2025 大雪山旅遊介紹網 | Designed for Nature Lovers</p>
+        <small class="text-muted">圖片來源：WikiMedia Commons / Unsplash</small>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
