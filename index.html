@@ -8,10 +8,10 @@
     <style>
         body { font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; background-color: #f8f9fa; }
         
-        /* --- Hero 區塊 (主視覺) --- */
+        /* --- Hero 區塊 --- */
         .hero {
-            /* 背景圖：使用大雪山雲海 */
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Dasyueshan_Forest_Road_48K_Observation_Deck_facing_east_20201025.jpg/1280px-Dasyueshan_Forest_Road_48K_Observation_Deck_facing_east_20201025.jpg');
+            /* 改用本地圖片 hero.jpg */
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -36,8 +36,8 @@
 
         /* --- 景點卡片區塊 --- */
         .card-img-top {
-            height: 250px; /* 強制圖片高度一致，排版才整齊 */
-            object-fit: cover; /* 讓圖片不變形填滿 */
+            height: 250px;
+            object-fit: cover;
         }
         .section-title {
             position: relative;
@@ -46,7 +46,6 @@
             font-weight: bold;
             color: #2c3e50;
         }
-        /* 標題下方的小裝飾線 */
         .section-title::after {
             content: "";
             position: absolute;
@@ -55,7 +54,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background-color: #198754; /* 森林綠 */
+            background-color: #198754;
         }
     </style>
 </head>
@@ -89,7 +88,7 @@
                 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/%E9%9B%AA%E5%B1%B1%E7%A5%9E%E6%9C%A8_Snow_Mountain_Sacred_Tree.jpg/800px-%E9%9B%AA%E5%B1%B1%E7%A5%9E%E6%9C%A8_Snow_Mountain_Sacred_Tree.jpg" class="card-img-top" alt="雪山神木">
+                        <img src="tree.jpg" class="card-img-top" alt="雪山神木">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">雪山神木</h5>
                             <p class="card-text text-secondary">樹齡約 1,400 年的紅檜，姿態挺拔壯觀，是台灣排名第 11 的巨木，也是大雪山的地標。</p>
@@ -99,7 +98,7 @@
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="https://images.unsplash.com/photo-1518182170546-07fa6eb29709?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="大雪山天池">
+                        <img src="lake.jpg" class="card-img-top" alt="大雪山天池">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">大雪山天池</h5>
                             <p class="card-text text-secondary">位於小雪山南稜，海拔 2,600 公尺的高山湖泊。終年不涸，湖面倒映著藍天與瑞雪亭。</p>
@@ -109,7 +108,7 @@
 
                 <div class="col-md-4">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="雲海晚霞">
+                        <img src="cloud.jpg" class="card-img-top" alt="雲海晚霞">
                         <div class="card-body">
                             <h5 class="card-title fw-bold">雲海晚霞</h5>
                             <p class="card-text text-secondary">大雪山林道 48K 觀景台是欣賞雲海的最佳地點，尤其在秋冬季節，氣勢磅礡。</p>
@@ -160,7 +159,6 @@
 
     <footer class="bg-dark text-white text-center py-4 mt-auto">
         <p class="m-0">&copy; 2025 大雪山旅遊介紹網 | Designed for Nature Lovers</p>
-        <small class="text-muted">圖片來源：WikiMedia Commons / Unsplash</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
